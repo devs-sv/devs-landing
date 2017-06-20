@@ -1,32 +1,11 @@
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/* Variables */
 
-/*
-Note: any .css or .scss files included in the 'styles' directory
-will be correctly compiled during `gulp serve` and `gulp`
- */
-
- /* Variables */
-
-$dark-blue: #31373E;
+$dark-blue: #2C353B;
 $light-blue: #21D6F0;
+$orange: #f0a121;
+$purple: #736EFE;
 $white: #FFFFFF;
 $black: #111111;
-
-
 
 html, body {
   font-family: "Roboto", "Helvetica", sans-serif;
@@ -36,118 +15,162 @@ html, body {
   padding: 0;
   color: $dark-blue;
 }
-.page {
-  position:absolute;
-  height:100%;
-  width:100%;
-}
+
 a {
-  color: inherit;
-  text-decoration: none;
-  &:hover {
-    border-bottom: 2px solid currentColor;
-  }
+  color: $dark-blue;
 }
 
 
-
-/* Header */
 .header {
+  position: relative;
+  height: 100vh;
+  padding: 0 1em;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
-  position: fixed;
-  top:0;
-  left:0;
-  color: $dark-blue;
-  background-image: url("../images/devs-background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 600px;
-  width:100%;
-  z-index: 1;
   text-align: center;
+  background-image: url("../images/devs-background.jpg");
+  background-position: top center;
+  background-size: cover;
+  z-index: 1;
+
+  &__logo {
+    display: block;
+    width: 150px;
+    margin: 1em auto;
+  }
+  &__title {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin: 0;
+  }
+  &__description {
+    max-width: 30em;
+    font-size: 1em;
+    margin: 1em auto;
+  }
 
   &:before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    /*background-color: $light-blue;*/
-    background: $light-blue;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, $white, $light-blue);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, $white, $light-blue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    opacity: .8;
+    top: 0; left: 0;
+    background-image: linear-gradient(318deg, #5EFCE8, #736EFE, #0396FF, #90F7EC, #21D6F0);
+    background-size: 400% 400%;
+    animation: BackgroundAnimation 50s ease infinite;
+    opacity: .9;
     z-index: -1;
   }
 
-  &__logo {
-    display: block;
-    width: 200px;
-    height: auto;
-    margin: 0 auto;
+  @media screen and (min-width: 30em) {
+    &__logo {
+      display: block;
+      width: 250px;
+    }
+    &__title {
+      font-size: 3em;
+      text-transform: uppercase;
+    }
+    &__description {
+      font-size: 1.5em;
+    }
   }
-  &__title {
-    margin: .5em 0;
-    font-size: 2em;
-    font-weight: bold;
+}
+
+@keyframes BackgroundAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+
+.button {
+  display: inline-block;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+
+  &--primary {
+    color: $white;
+    background-color: $orange;
   }
-  &__description {
-    margin: 0;
-    font-size: 1.2em;
+  &--secondary {
+    color: $white;
+    background-color: $dark-blue;
+  }
+  &--center {
+    max-width: 450px;
+    margin: 1em auto;
   }
 }
 
 
 
-/* Navigation */
 .nav-wrapper {
-  background-color: $light-blue;
+  padding: 1em 0;
+  color: $white;
+  background-color: $dark-blue;
+  @media screen and (min-width: 52em) {
+    padding: .5em 0;
+  }
 }
 .nav {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 1em 0;
-
-  &__logo {
-    width: 32px;
-    height: auto;
-    display: block;
+  align-items: center;
+  @media screen and (min-width: 52em) {
+    flex-direction: row;
   }
-  &__menu {
-    color: $dark-blue;
-    padding: 0;
-    margin: 0;
-    li {
-      font-weight: bold;
-      display: inline-block;
-      margin: 0 1em;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    margin: .5em;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    @media screen and (min-width: 52em) {
+      margin: 0 .5em;
     }
   }
 }
 
 
-/* Content */
-.content {
-  position:relative;
-  z-index:1000;
-  margin-top: 600px;
-  color: $dark-blue;
-  background-color: $white;
-}
+
 .container {
-  max-width: 48em;
+  max-width: 52em;
   margin: 0 auto;
   padding: 0 1em;
 }
 
-
-
 .section {
   padding: 2em 0;
+
+  @media screen and (min-width: 30em) {
+    padding: 3em 0;
+  }
+
+  &__title {
+    font-size: 1em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    @media screen and (min-width: 30em) {
+      font-size: 2em;
+    }
+  }
 }

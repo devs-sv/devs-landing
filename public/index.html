@@ -3,47 +3,172 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+    <meta name="description" content="Somos una comunidad que reúne a varias comunidades de tecnología en El Salvador">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Developers SV</title>
 
     <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="#31373E">
 
+    <link rel="shortcut icon" type="image/png" href="images/devs-sv-icon.png"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
 
-    <div class="page">
-      <div class="header">
-        <div class="container">
-          <img src="images/devs-sv-full.png" class="header__logo" alt="Developers SV">
-          <h1 class="header__title">Developers SV</h1>
-          <p class="header__description">Somos una comunidad que reúne a comunidades de tecnología en El Salvador. Organizamos actividades de desarrolladores para desarrolladores.</p>
+    <header class="header">
+      <span class="header__overlay"></span>
+      <img src="images/devs-sv-full.png" alt="Developers SV" class="header__logo">
+      <h1 class="header__title">Developers SV</h1>
+      <p class="header__description">Somos una comunidad que reúne a varias comunidades de tecnología en El Salvador</p>
+      <!-- <a href="#" class="button button--primary button--center">Conoce más</a> -->
+    </header>
+
+    <div class="nav-wrapper">
+      <div class="container">
+        <div class="nav">
+          <img src="images/devs-sv-horizontal.png" height="50" alt="Developers SV" class="nav__logo">
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#nosotros">Nosotros</a>
+            </li>
+            <li class="menu__item">
+              <a href="#comunidades">Comunidades</a>
+            </li>
+            <li class="menu__item">
+              <a href="#patrocinadores">Patrocinadores</a>
+            </li>
+            <li class="menu__item">
+              <a href="#organizadores">Organizadores</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <main class="content" role="main">
-        <div class="nav-wrapper">
-          <div class="container">
-            <nav class="nav">
-              <img src="images/devs-sv-icon.png" class="nav__logo">
-              <ul class="nav__menu">
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Comunidades</a></li>
-                <li><a href="#">Organizadores</a></li>
-                <li><a href="#">Patrocinadores</a></li>
-                <li><a href="#">Lugar</a></li>
-              </ul>
-            </nav>
+    </div>
+
+    <section class="section tc" id="nosotros">
+      <div class="container container--small">
+        <h2 class="section__title">Sobre Nosotros</h2>
+        <p class="measure-wide center">Nuestro objetivo es hacer crecer la comunidad de desarrolladores/as en El Salvador a través de conferencias, charlas y talleres que ayuden a mejorar la calidad de profesionales en la industria. Actualmente organizamos un conferencia general cada 2 meses llamada DevUP y varias reuniones locales con cada unas de las comunidades.</p>
+        <p class="measure-wide center">La comunidad se rige por un <a href="https://github.com/devs-sv/codigo-de-conducta">código de conducta</a> con el que procuramos mantener un ambiente agradable y seguro para todas las personas que nos acompañan.</p>
+      </div>
+    </section>
+
+    <section class="section tc" id="comunidades">
+      <div class="container container--small">
+        <h2 class="section__title">Comunidades</h2>
+        <p class="measure-wide center">Actualmente somos 3 comunidadas las que conformamos Developers SV:</p>
+        <div class="pv3 tc">
+          <div class="dib mv3 mh4 tc">
+            <a href="https://www.facebook.com/groups/androiddevssv" target="_blank" class="link">
+              <img src="images/comunidades/android-sv.png" class="db center h3 h4-ns" alt="Logo">
+              <h3>Android Developers</h3>
+            </a>
+          </div>
+          <div class="dib mv3 mh4 tc">
+            <a href="https://www.facebook.com/groups/horchatajs/" target="_blank" class="link">
+              <img src="images/comunidades/horchata-js.png" class="db center h3 h4-ns" alt="Logo">
+              <h3>HorchataJS</h3>
+            </a>
+          </div>
+          <div class="dib mv3 mh4 tc">
+            <a href="https://www.facebook.com/groups/1951939478466141/" target="_blank" class="link">
+              <img src="images/comunidades/sivar-on-rails.png" class="db center h3 h4-ns" alt="Logo">
+              <h3>Sivar on Rails</h3>
+            </a>
           </div>
         </div>
-        <div class="container">
-          <section class="section">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </section>
+      </div>
+    </section>
+
+    <section class="section tc" id="patrocinadores">
+      <div class="container">
+        <h2 class="section__title">Patrocinadores</h2>
+        <p class="measure-wide center">Empresas y organizaciones que nos apoyan:</p>
+        <div class="pv3 tc">
+          <div class="dib mv3 mh4 tc">
+            <a href="http://www.applaudostudios.com/" target="_blank">
+              <img src="images/patrocinadores/applaudostudios.png" class="db center h-auto h4-ns" alt="Applaudo Studios">
+            </a>
+          </div>
+          <div class="dib mv3 mh4 tc">
+            <a href="https://www.audiovisualesuca.com/" target="_blank">
+              <img src="images/patrocinadores/audiovisuales-uca.jpg" class="db center h-auto h4-ns" alt="Audiovisuales UCA">
+            </a>
+          </div>
         </div>
-      </main>
-    </div>
+        <div class="pv3 tc">
+          <div class="dib mv3 mh4 tc">
+            <a href="https://elaniin.com/" target="_blank">
+              <img src="images/patrocinadores/elaniin.png" class="db center h-auto h3-ns" alt="Elaniin">
+            </a>
+          </div>
+          <div class="dib mv3 mh4 tc">
+            <a href="http://www.telusinternational-ca.com/sp/el-salvador/" target="_blank">
+              <img src="images/patrocinadores/telus.jpg" class="db center h-auto h3-ns" alt="Telus International">
+            </a>
+          </div>
+          <div class="dib mv3 mh4 tc">
+            <a href="http://www.svnet.org.sv/" target="_blank">
+              <img src="images/patrocinadores/sv-net.jpg" class="db center h-auto h3-ns" alt="SV Net">
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="button button--primary button--center">Quiero patrocinar</a>
+    </section>
+
+    <section class="section tc" id="organizadores">
+      <div class="container container--small">
+        <h2 class="section__title">Organizadores</h2>
+        <p class="measure-wide center">Somos un grupo de voluntarios:</p>
+        <div class="pv3 tc">
+          <div class="dib mv3 mh4 tc">
+            <a href="#" target="_blank" class="link">
+              <img src="images/organizadores/amilcar-serrano.jpg" class="db center w3 br-100" alt="Amilcar Serrano">
+              <p>Amilcar Serrano</p>
+            </a>
+          </div>
+          <div class="dib mv3 mh4 tc">
+            <a href="#" target="_blank" class="link">
+              <img src="images/organizadores/carlos-moreno.jpg" class="db center w3 br-100" alt="Carlos Moreno">
+              <p>Carlos Moreno</p>
+            </a>
+          </div>
+          <div class="dib mv3 mh4 tc">
+            <a href="#" target="_blank" class="link">
+              <img src="images/organizadores/ricardo-ramirez.jpg" class="db center w3 br-100" alt="Ricardo Ramirez">
+              <p>Ricardo Ramirez</p>
+            </a>
+          </div>
+          <div class="dib mv3 mh4 tc">
+            <a href="#" target="_blank" class="link">
+              <img src="images/organizadores/rodrigo-puente.jpg" class="db center w3 br-100" alt="Rodrigo Puente">
+              <p>Rodrigo Puente</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="button button--primary button--center">Quiero colaborar</a>
+    </section>
+
+    <section class="section tc bg-light-gray">
+      <a href="https://github.com/devs-sv/codigo-de-conducta" target="_blank" class="f5 f3-ns">Código de conducta</a>
+      <div class="pt3">
+        <ul class="list ph0">
+          <li class="dib mh3">
+            <a href="https://www.facebook.com/developers.sv/" target="_blank">Facebook</a>
+          </li>
+          <li class="dib mh3">
+            <a href="https://twitter.com/developers_sv" target="_blank">Twitter</a>
+          </li>
+          <li class="dib mh3">
+            <a href="https://www.instagram.com/developers.sv/" target="_blank">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
@@ -54,9 +179,11 @@
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-XXXXX-X', 'auto');
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-101259715-1', 'auto');
       ga('send', 'pageview');
+
     </script>
   </body>
 </html>
