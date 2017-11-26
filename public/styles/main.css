@@ -115,6 +115,8 @@ a {
   padding: 1em 0;
   color: $white;
   background-color: $dark-blue;
+  position: sticky;
+  top: -1px;
   @media screen and (min-width: 52em) {
     padding: .5em 0;
   }
